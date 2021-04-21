@@ -11,7 +11,7 @@ const refs = {
   icon: document.querySelectorAll('.theme-switch__icon'),
 };
 
-refs.body.classList.add(Theme.LIGHT);
+refs.body.classList.toggle(Theme.LIGHT);
 onContentLoad();
 refs.switch.addEventListener('change', onSwitchChange);
 
