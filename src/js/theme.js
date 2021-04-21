@@ -7,8 +7,6 @@ const refs = {
   body: document.querySelector('body'), //use
   switch: document.querySelector('.theme-switch__control'), //use
   input: document.querySelector('#theme-switch-toggle'), //use
-  track: document.querySelector('.theme-switch__track'),
-  icon: document.querySelectorAll('.theme-switch__icon'),
 };
 
 refs.body.classList.toggle(Theme.LIGHT);
