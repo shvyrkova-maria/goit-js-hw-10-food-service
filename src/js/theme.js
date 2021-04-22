@@ -9,8 +9,6 @@ const refs = {
   input: document.querySelector('#theme-switch-toggle'),
 };
 
-refs.body.classList.toggle(Theme.LIGHT);
-refs.body.classList.value = localStorage.getItem('theme');
 onContentLoad();
 refs.switch.addEventListener('change', onSwitchChange);
 
@@ -18,6 +16,10 @@ function onContentLoad() {
   refs.body.classList.value = localStorage.getItem('theme');
   if (refs.body.classList.contains(Theme.DARK)) {
     refs.input.setAttribute('checked', 'true');
+  }
+  if (refs.body.classList.contains(' ')) {
+    refs.body.classList.toggle(Theme.LIGHT);
+    localStorage.setItem('theme', Theme.LIGHT);
   }
 }
 
